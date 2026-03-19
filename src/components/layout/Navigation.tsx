@@ -13,13 +13,13 @@ const mainNavItems: NavItem[] = [
     { label: "Home", path: "/", icon: "🏠" },
     { label: "Museion", path: "/museion", icon: "🔬" },
     { label: "Challenges", path: "/challenges", icon: "🎯" },
-    { label: "Argonauts", path: "/argonauts", icon: "🚀" },
+    { label: "Argonauts", path: "/argonauts", icon: "⚔" },
     { label: "Funding", path: "/funding", icon: "💼" },
     { label: "Recruit", path: "/recruit", icon: "👥" },
+    { label: "Dashboard", path: "/dashboard", icon: "📊" },
 ];
 
 const userNavItems: NavItem[] = [
-    { label: "Dashboard", path: "/dashboard", icon: "📊" },
     { label: "My Koko", path: "/my-koko", icon: "⭐" },
     { label: "My IPs", path: "/my-ips", icon: "📁" },
     { label: "My Challenges", path: "/my-challenges", icon: "✅" },

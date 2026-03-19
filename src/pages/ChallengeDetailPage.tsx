@@ -1,11 +1,12 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Card } from "../ui/primitives/Card";
 import { PageHeader } from "../ui/layout/PageHeader";
 import { Btn } from "../ui/primitives/Button";
 import { CHALLENGES } from "../data/mockData";
 
-export const ChallengeDetailPage = ({ setPage }: { setPage: (page: string) => void }) => {
-    const params = useParams();
+export const ChallengeDetailPage = () => {
+    const navigate = useNavigate();
+    const params = useParams<{ id: string }>();
     const id = params.id;
     const challenge = CHALLENGES.find((c) => c.id === id);
 
@@ -14,7 +15,7 @@ export const ChallengeDetailPage = ({ setPage }: { setPage: (page: string) => vo
             <div style={{ padding: "2rem", textAlign: "center", color: "#64748B" }}>
                 <h2>Challenge Not Found</h2>
                 <p>The challenge ID “{id}” could not be found.</p>
-                <Btn onClick={() => setPage("challenges")}>Back to Challenges</Btn>
+                <Btn onClick={() => navigate("/challenges")}>Back to Challenges</Btn>
             </div>
         );
     }
@@ -25,7 +26,7 @@ export const ChallengeDetailPage = ({ setPage }: { setPage: (page: string) => vo
                 title={challenge.title}
                 sub={`${challenge.org} • ${challenge.industry}`}
                 badge="🎯 Challenge"
-                action={() => setPage("challenges")}
+                action={() => navigate("/challenges")}
                 actionLabel="Back"
             />
             <Card style={{ padding: 20, marginBottom: 16 }} hover={false}>
@@ -47,7 +48,7 @@ export const ChallengeDetailPage = ({ setPage }: { setPage: (page: string) => vo
 
             <Card style={{ padding: 20, marginBottom: 16 }} hover={false}>
                 <h3 style={{ margin: 0, fontSize: 18 }}>Overview</h3>
-                <p style={{ marginTop: 10, color: "#475569", lineHeight: 1.6 }}>{challenge.description}</p>
+                <p style={{ marginTop: 10, color: "#475569", lineHeight: 1.6 }}>{challenge.desc}</p>
                 <div style={{ marginTop: 10, display: "flex", gap: 8, flexWrap: "wrap" }}>
                     {challenge.tags.map((tag) => (
                         <span key={tag} style={{ padding: "0.22rem 0.6rem", borderRadius: 8, background: "#E2E8F0", color: "#1F2937", fontSize: 12 }}>
@@ -61,16 +62,16 @@ export const ChallengeDetailPage = ({ setPage }: { setPage: (page: string) => vo
                 <h3 style={{ margin: 0, fontSize: 18, marginBottom: 10 }}>Opportunity</h3>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(100px, 1fr))", gap: 10 }}>
                     <div style={{ borderRadius: 10, background: "#F8FAFC", border: "1px solid #E2E8F0", padding: 12 }}>
-                        <div style={{ fontSize: 11, color: "#94A3B8" }}>Submissions</div>
-                        <div style={{ fontSize: 16, fontWeight: 700 }}>{challenge.submissionCount}</div>
+                        <div style={{ fontSize: 11, color: "#94A3B8" }}>Proposals</div>
+                        <div style={{ fontSize: 16, fontWeight: 700 }}>{challenge.proposals}</div>
                     </div>
                     <div style={{ borderRadius: 10, background: "#F8FAFC", border: "1px solid #E2E8F0", padding: 12 }}>
-                        <div style={{ fontSize: 11, color: "#94A3B8" }}>Reviewed</div>
-                        <div style={{ fontSize: 16, fontWeight: 700 }}>{challenge.reviewedCount}</div>
+                        <div style={{ fontSize: 11, color: "#94A3B8" }}>Urgent</div>
+                        <div style={{ fontSize: 16, fontWeight: 700 }}>{challenge.urgent ? "Yes" : "No"}</div>
                     </div>
                     <div style={{ borderRadius: 10, background: "#F8FAFC", border: "1px solid #E2E8F0", padding: 12 }}>
-                        <div style={{ fontSize: 11, color: "#94A3B8" }}>Difficulty</div>
-                        <div style={{ fontSize: 16, fontWeight: 700 }}>{challenge.difficulty}</div>
+                        <div style={{ fontSize: 11, color: "#94A3B8" }}>Industry</div>
+                        <div style={{ fontSize: 16, fontWeight: 700 }}>{challenge.industry}</div>
                     </div>
                 </div>
             </Card>

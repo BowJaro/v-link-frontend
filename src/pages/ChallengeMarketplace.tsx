@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface ChallengeMarketplaceProps {
-  setPage: (page: string) => void;
   addNotif?: (notif: any) => void;
 }
 
@@ -110,7 +109,7 @@ export const ChallengeMarketplace: React.FC<ChallengeMarketplaceProps> = () => {
             fontWeight: "600",
             cursor: "pointer",
           }}
-          onClick={() => navigate("/challenges/create")}
+          onClick={() => navigate("/challenges/new")}
         >
           + Post Challenge
         </button>

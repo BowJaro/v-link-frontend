@@ -79,7 +79,7 @@ const TEAMS: Team[] = [
   },
 ];
 
-export const RecruitmentPage: React.FC<RecruitmentPageProps> = ({ setPage, addNotif }) => {
+export const RecruitmentPage: React.FC<RecruitmentPageProps> = ({ setPage: _setPage, addNotif: _addNotif }) => {
   const [activeTab, setActiveTab] = useState<"teams" | "talents">("teams");
 
   return (

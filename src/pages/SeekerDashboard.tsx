@@ -6,7 +6,7 @@ interface SeekerDashboardProps {
   argonautsList?: any[];
 }
 
-export const SeekerDashboard: React.FC<SeekerDashboardProps> = ({ setPage, addNotif, argonautsList }) => {
+export const SeekerDashboard: React.FC<SeekerDashboardProps> = ({ setPage: _setPage, addNotif: _addNotif, argonautsList: _argonautsList }) => {
   const stats = [
     { label: "Innovations Discovered", value: "23", icon: "🔍" },
     { label: "Active Projects", value: "3", icon: "📊" },
