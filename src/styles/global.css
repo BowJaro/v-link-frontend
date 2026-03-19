@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f0f4fc;
+  font-family: "DM Sans", sans-serif;
+  color: #1e293b;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f4fc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7d2e8;
+  border-radius: 3px;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #c7d2e8 #f0f4fc;
+  scrollbar-width: thin;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #93c5fd !important;
+  outline: none !important;
+}
+
+/* Buttons */
+button {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Links */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Text selection */
+::selection {
+  background-color: #93c5fd;
+  color: #1e293b;
+}
+
+::-moz-selection {
+  background-color: #93c5fd;
+  color: #1e293b;
+}
+
+/* Placeholder styling */
+::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #94a3b8;
+}
+
+::-ms-input-placeholder {
+  color: #94a3b8;
+}

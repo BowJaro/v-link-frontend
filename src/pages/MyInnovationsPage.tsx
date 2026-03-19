@@ -1,0 +1,1 @@
+export { MyInnovationsPage } from "./innovations/MyInnovationsPage";

@@ -68,7 +68,7 @@ export const NEWS_TYPE_COLORS = {
   general: "#94A3B8",
 } as const;
 
-export const FIELDS_LIST = [
+export const FIELDS_LIST: string[] = [
   "AgriTech",
   "FinTech",
   "CleanTech",
@@ -79,7 +79,7 @@ export const FIELDS_LIST = [
   "GovTech",
   "EdTech",
   "BioTech",
-] as const;
+];
 
 export const ARGONAUTS_STATUS = {
   open: { label: "Open", color: "#10B981", icon: "🟢" },
