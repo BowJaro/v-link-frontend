@@ -1,4 +1,4 @@
-import React, { useState, useContext, createContext } from "react";
+import React, { useState } from "react";
 
 interface KokoBtnProps {
   type: "innovations" | "argonauts" | "challenges" | "projects" | "roles";
@@ -6,13 +6,9 @@ interface KokoBtnProps {
   size?: "sm" | "md";
 }
 
-// Mock context for Koko state
-const KokoContext = createContext(null);
-
 export const KokoBtn: React.FC<KokoBtnProps> = ({ type, item, size = "md" }) => {
-  const context = useContext(KokoContext);
-  const isKoko = (type: string, itemId: string) => false; // Mock
-  const toggleKoko = (type: string, item: any) => { }; // Mock
+  const isKoko = (_type: string, _itemId: string) => false; // Mock
+  const toggleKoko = (_type: string, _item: any) => { }; // Mock
 
   const saved = isKoko(type, item.id);
   const [pop, setPop] = useState(false);

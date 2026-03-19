@@ -27,7 +27,7 @@ export const TeamTab: FC<TeamTabProps> = ({ ip }) => {
           <Avatar
             name={a.name}
             size={40}
-            color={CAT_COLORS[ip.field] || "#2563EB"}
+            color={CAT_COLORS[ip.field as keyof typeof CAT_COLORS] || "#2563EB"}
           />
           <div style={{ flex: 1 }}>
             <div

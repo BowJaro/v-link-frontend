@@ -1,5 +1,4 @@
 // Navigation configuration for VIX Platform
-import { ROLE_CFG } from "./constants";
 
 export type Role = "admin" | "innovator" | "seeker" | "investor";
 
