@@ -9,7 +9,7 @@ import { TRLBadge } from "../../components/ip/TRLBadge";
 import { StatusBadge } from "../../components/StatusBadge";
 
 // Data & Constants
-import { IP_DATA, PROJECTS } from "../../config/mockData";
+import { IP_DATA, PROJECTS } from "../../data/mockData";
 import { CAT_COLORS } from "../../config/constants";
 
 interface MyInnovationsPageProps {

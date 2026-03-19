@@ -1,4 +1,7 @@
-// Design tokens for VIX Innovation Platform
+// Design tokens for V-LINK Innovation Platform
+
+export const APP_NAME = "V-LINK";
+export const APP_TAGLINE = "Connect. Innovate. Collaborate.";
 
 export const TRL_COLORS = {
   1: "#EF4444",

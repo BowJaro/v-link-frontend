@@ -11,7 +11,7 @@ import { KokoBtn } from "../../components/KokoBtn";
 import { ArgonautsCard } from "../../components/ArgonautsCard";
 
 // Data & Constants
-import { IP_DATA } from "../../config/mockData";
+import { IP_DATA } from "../../data/mockData";
 import { CAT_COLORS } from "../../config/constants";
 
 interface Argonaut {

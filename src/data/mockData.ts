@@ -1,4 +1,4 @@
-// Mock data for V-LINK Innovation Platform
+// Mock data for VIX Innovation Platform
 
 export const USERS = [
   {
@@ -27,7 +27,7 @@ export const USERS = [
   },
   {
     id: "u4",
-    name: "Admin – V-LINK Platform",
+    name: "Admin – VIX Platform",
     role: "admin",
     dept: "Platform Operations",
     color: "#7C3AED",

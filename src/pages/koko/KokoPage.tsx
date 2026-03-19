@@ -12,7 +12,7 @@ import { KokoBtn } from "../../components/KokoBtn";
 import { ProgressBar } from "../../ui/primitives/ProgressBar";
 
 // Data & Constants
-import { useKoko } from "../../hooks/useKoko";
+import { useKoko } from "../../context/KokoContext";
 import {
   CAT_COLORS,
   ARGONAUTS_STATUS,

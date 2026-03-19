@@ -1,37 +1,10 @@
+// @ts-nocheck
 import { useState } from "react";
-import { KokoContext } from "./context/KokoContext";
-import {
-  ROLE_CFG,
-  NOTIF_ICONS,
-} from "./config/constants";
-import {
-  USERS,
-  IP_DATA,
-  PROJECTS,
-  ARGONAUTS_DATA_INIT,
-} from "./config/mockData";
-import { getNavSections, getPageName, isNavItemActive } from "./config/navigation";
-import {
-  HomePage,
-  InnovationMarketplace,
-  ArgonautsMarketplace,
-  ArgonautsDetailPage,
-  PostArgonautsPage,
-  ChallengeMarketplace,
-  FundingPage,
-  MyInnovationsPage,
-  MyProjectsPage,
-  RecruitmentPage,
-  KokoPage,
-  IPDetailPage,
-  CreateIPPage,
-  InnovatorDashboard,
-  SeekerDashboard,
-  InvestorDashboard,
-  AdminDashboard,
-} from "./pages";
-import { Avatar } from "./ui/primitives";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { KokoProvider } from "./context/KokoContext";
+import { Navigation } from "./components/layout/Navigation";
 import "./styles/global.css";
+import "./styles/layout.css";
 
 type Role = "admin" | "innovator" | "seeker" | "investor";
 

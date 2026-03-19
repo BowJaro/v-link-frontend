@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useKoko } from "../context/KokoContext";
 
 interface KokoBtnProps {
   type: "innovations" | "argonauts" | "challenges" | "projects" | "roles";
@@ -7,9 +8,7 @@ interface KokoBtnProps {
 }
 
 export const KokoBtn: React.FC<KokoBtnProps> = ({ type, item, size = "md" }) => {
-  const isKoko = (_type: string, _itemId: string) => false; // Mock
-  const toggleKoko = (_type: string, _item: any) => { }; // Mock
-
+  const { isKoko, toggleKoko } = useKoko();
   const saved = isKoko(type, item.id);
   const [pop, setPop] = useState(false);
 

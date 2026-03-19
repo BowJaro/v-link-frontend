@@ -13,7 +13,7 @@ import { Tag } from "../../ui/primitives/Tag";
 import { StatusBadge } from "../../components/StatusBadge";
 
 // Data & Constants
-import { IP_DATA, PROJECTS } from "../../config/mockData";
+import { IP_DATA, PROJECTS } from "../../data/mockData";
 import { FIELDS_LIST, CAT_COLORS } from "../../config/constants";
 
 interface InnovationMarketplaceProps {

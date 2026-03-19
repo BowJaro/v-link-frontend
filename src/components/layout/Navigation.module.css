@@ -1,0 +1,214 @@
+.navbar {
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.container {
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+    min-width: 200px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logoText {
+    font-family: "Syne", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    font-size: 0.625rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.mainNav {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex: 1;
+    justify-content: center;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    text-decoration: none;
+}
+
+.navLink:hover {
+    color: var(--primary);
+    background: var(--bg-tertiary);
+}
+
+.navLink.active {
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+.icon {
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.label {
+    display: inline;
+}
+
+.userNav {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.navIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    font-size: 1.2rem;
+    transition: all var(--transition-base);
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.navIcon:hover {
+    background: var(--bg-tertiary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.navIcon.active {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.mobileToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0;
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    animation: fadeIn var(--transition-fast);
+}
+
+.mobileMenuContent {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg-primary);
+    overflow-y: auto;
+    padding: var(--spacing-lg);
+    animation: slideInRight var(--transition-base);
+}
+
+.section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.section h3 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 0.5px;
+}
+
+.mobileLink {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-sm);
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    margin-bottom: var(--spacing-sm);
+}
+
+.mobileLink:hover {
+    background: var(--bg-tertiary);
+    color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+    .mainNav {
+        display: none;
+    }
+
+    .mobileToggle {
+        display: block;
+    }
+
+    .container {
+        padding: var(--spacing-md);
+    }
+
+    .brand {
+        min-width: auto;
+    }
+
+    .tagline {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .userNav {
+        display: none;
+    }
+
+    .mobileMenuContent {
+        width: 100%;
+        max-width: none;
+    }
+}

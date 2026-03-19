@@ -27,7 +27,7 @@ import {
   CAT_COLORS,
   ROLE_CFG,
 } from "../../config/constants";
-import { USERS } from "../../config/mockData";
+import { USERS } from "../../data/mockData";
 
 interface IPDetailPageProps {
   ip: any;
