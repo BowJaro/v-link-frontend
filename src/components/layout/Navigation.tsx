@@ -11,19 +11,20 @@ interface NavItem {
 
 const mainNavItems: NavItem[] = [
     { label: "Home", path: "/", icon: "🏠" },
-    { label: "Museion", path: "/innovations", icon: "✨" },
+    { label: "Museion", path: "/museion", icon: "🔬" },
     { label: "Challenges", path: "/challenges", icon: "🎯" },
     { label: "Argonauts", path: "/argonauts", icon: "🚀" },
-    { label: "Funding", path: "/funding", icon: "💰" },
-    { label: "Recruit", path: "/recruitment", icon: "👥" },
+    { label: "Funding", path: "/funding", icon: "💼" },
+    { label: "Recruit", path: "/recruit", icon: "👥" },
 ];
 
 const userNavItems: NavItem[] = [
     { label: "Dashboard", path: "/dashboard", icon: "📊" },
-    { label: "My IPs", path: "/my-innovations", icon: "🔬" },
+    { label: "My Koko", path: "/my-koko", icon: "⭐" },
+    { label: "My IPs", path: "/my-ips", icon: "📁" },
     { label: "My Challenges", path: "/my-challenges", icon: "✅" },
+    { label: "My Argonauts", path: "/my-argonauts", icon: "⚔" },
     { label: "My Teams", path: "/my-teams", icon: "🤝" },
-    { label: "My Koko", path: "/koko", icon: "📌" },
     { label: "Profile", path: "/profile", icon: "👤" },
 ];
 

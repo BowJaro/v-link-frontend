@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import type { FC } from "react";
 
 // UI Components
@@ -28,11 +29,13 @@ interface Argonaut {
 }
 
 interface HomePageProps {
-  setPage: (page: string) => void;
   argonautsList: Argonaut[];
 }
 
-export const HomePage: FC<HomePageProps> = ({ setPage, argonautsList }) => (
+export const HomePage: FC<HomePageProps> = ({ argonautsList }) => {
+  const navigate = useNavigate();
+
+  return (
   <div>
     <div
       style={{
@@ -113,7 +116,7 @@ export const HomePage: FC<HomePageProps> = ({ setPage, argonautsList }) => (
           ] as const).map(([l, bg, pg], i) => (
             <button
               key={i}
-              onClick={() => setPage(pg as string)}
+              onClick={() => navigate(pg === "innovations" ? "/museion" : pg === "argonauts" ? "/argonauts" : pg === "challenges" ? "/challenges" : "/")}
               style={{
                 padding: "11px 22px",
                 borderRadius: 12,
@@ -179,7 +182,7 @@ export const HomePage: FC<HomePageProps> = ({ setPage, argonautsList }) => (
     </div>
     <SectionTitle
       title="⚔ Featured Argonauts Missions"
-      action={() => setPage("argonauts")}
+      action={() => navigate("/argonauts")}
       actionLabel="All Missions →"
     />
     <div
@@ -194,13 +197,13 @@ export const HomePage: FC<HomePageProps> = ({ setPage, argonautsList }) => (
         <ArgonautsCard
           key={arg.id}
           arg={arg}
-          onClick={() => setPage("arg-" + arg.id)}
+          onClick={() => navigate(`/argonauts/${arg.id}`)}
         />
       ))}
     </div>
     <SectionTitle
       title="Featured Innovations"
-      action={() => setPage("innovations")}
+      action={() => navigate("/museion")}
       actionLabel="View All →"
     />
     <div
